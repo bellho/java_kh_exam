@@ -1,0 +1,2 @@
+module kh_practice {
+}
