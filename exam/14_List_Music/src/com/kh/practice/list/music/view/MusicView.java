@@ -151,15 +151,15 @@ public class MusicView {
 
 	public void setMusic() {
 		System.out.println("****** 특정 곡 정보 수정 ******");
-		System.out.println("검색할 곡명을 입력해주세요.");
-		String title = sc.nextLine();
 		System.out.println("수정할 곡명을 입력해주세요.");
+		String title = sc.nextLine();
+		System.out.println("변경할 곡명을 입력해주세요.");
 		String aftTitle = sc.nextLine();
-		System.out.println("수정할 가수명을 입력해주세요.");
+		System.out.println("변경할 가수명을 입력해주세요.");
 		String aftSinger = sc.nextLine();
 		Music result = mc.setMusic(title, new Music(aftTitle, aftSinger));
 		if(result == null) {
-			System.out.println("검색한 곡이 없습니다.");
+			System.out.println("수정할 곡이 없습니다.");
 		} else {
 			System.out.printf("수정한 곡은 000(%s, %s) 입니다.\n", result.getTitle(), result.getSinger());
 		}
@@ -167,11 +167,11 @@ public class MusicView {
 	}
 	
 	public void ascTitle() {
-		
+		mc.ascTitle();
 	}
 
 	public void descSinger() {
-
+		mc.descSinger();
 	}
 
 }

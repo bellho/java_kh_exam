@@ -58,26 +58,66 @@ public class MusicController {
 		return result;
 	}
 	public Music setMusic(String title, Music music) {
+//		Music result = null;
+//		for(Music vo : list) {
+//			if(vo.getTitle().equals(title)) {
+//				list.remove(vo);
+//				result = vo;
+//				
+//				int finIdx = list.indexOf(vo);
+//				list.set(findIdx, music);
+//				break; // 강사님이 한 방법
+//			}
+//		}
+//		return result;
+		
 		Music result = null;
-		for(Music vo : list) {
-			if(vo.getTitle().equals(title)) {
-				result = music;
+		for(int i = 0; i < list.size(); i++) {
+			if(list.get(i).getTitle().equals(title)) {
+				result = list.get(i);
+				list.set(i, music);
 				break;
 			}
 		}
 		return result;
 	}
 	public int ascTitle() {
-		Collections.sort(list, new AscTitle());
+//		Collections.sort(list, new AscTitle());
 		int result = 0;
-		//TODO
+		for(int i = 0; i < list.size() - 1; i++) {
+			for(int j = 0; j < list.size() - (i + 1); j++) {
+				if(list.get(j).getTitle().compareTo(list.get(j + 1).getTitle()) > 0) {
+					Music tmp = list.get(j);
+					list.set(j,  list.get(j + 1));
+					list.set(j + 1, tmp);
+				}
+			}
+		}
 		return result;
 	}
 	public int descSinger() {
-		Collections.sort(list);
+		// list 에서 singer 에서 singer는 없다.
+		//list.get(0).getSinger;
 		int result = 0;
-		//TODO
+		for(int i = 0; i < list.size() - 1; i++) {
+			for(int j = 0; j < list.size() - (i + 1); j++) {
+				if(list.get(j).getSinger().compareTo(list.get(j + 1).getSinger()) < 0) {
+					Music tmp = list.get(j);
+					list.set(j,  list.get(j + 1));
+					list.set(j + 1, tmp);
+				}
+			}
+		}
 		return result;
 	}
-	
+	public int ascTitle2() {
+		int result = 0;
+		
+		return result;
+	}
+	public int descSinger2() {
+int result = 0;
+		
+		return result;
+	}
 }

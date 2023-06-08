@@ -46,7 +46,9 @@ public class Music implements Comparable<Music>{
 	}
 	@Override
 	public int compareTo(Music o) {
-		return this.getSinger().compareTo(o.getSinger());
+		int result = this.singer.compareTo(o.getSinger());
+		return result * -1;
+		
 	}
 	
 	
