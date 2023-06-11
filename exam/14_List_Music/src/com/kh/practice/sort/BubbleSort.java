@@ -23,46 +23,46 @@ public class BubbleSort {
 		// 배열 ==> List
 		System.out.println(Arrays.toString(arr));
 		System.out.print("[");
-		for (int i : arr) {
+		for (int i = 0; i < arr.length; i++) {
 			System.out.print(i);
-			if(arr.hashCode() > 0) {
-			System.out.print(",");
+			for(int j = 0; j < arr.length - 1; j++) {
+				System.out.print(",");
 			}
 		}
-		System.out.println("]");
-		for (int i = 0; i < arr.length - 1; i++) {
-			for (int j = 0; j < arr.length - (i + 1); j++) {
-				if (arr[j] < arr[j + 1]) { // 오름차순
-					// if(arr[j] > arr[j + 1]){ 내림차순
-					// SWAP
-					int tmp = arr[j];
-					arr[j] = arr[j + 1];
-					arr[j + 1] = tmp;
-				}
-			}
-		}
-		for (int i : arr) {
-			System.out.print(i);
-		}
-		//String 타입으로 버블정렬
-		String [] nameArr = new String[] {"손범규","천영준","유청하","김민성"};
-		
-		for(int i = 0; i < nameArr.length - 1; i++) {
-			for(int j = 0; j < nameArr.length - (i + 1); j++) {
-				if(nameArr[j].compareTo(nameArr[j + 1]) > 0) {
-					String tmp = nameArr[j];
-					nameArr[j] = nameArr[j + 1];
-					nameArr[j + 1] = tmp;
-				}
-			}
-		}
-		System.out.print("[");
-		for (String starr : nameArr) {
-			System.out.print(starr);
-			System.out.print(",");
-		}
-		System.out.print("]");
+//		System.out.println("]");
+//		for (int i = 0; i < arr.length - 1; i++) {
+//			for (int j = 0; j < arr.length - (i + 1); j++) {
+//				if (arr[j] < arr[j + 1]) { // 오름차순
+//					// if(arr[j] > arr[j + 1]){ 내림차순
+//					// SWAP
+//					int tmp = arr[j];
+//					arr[j] = arr[j + 1];
+//					arr[j + 1] = tmp;
+//				}
+//			}
+//		}
+//		for (int i : arr) {
+//			System.out.print(i);
+//		}
+//		//String 타입으로 버블정렬
+//		String [] nameArr = new String[] {"손범규","천영준","유청하","김민성"};
+//		
+//		for(int i = 0; i < nameArr.length - 1; i++) {
+//			for(int j = 0; j < nameArr.length - (i + 1); j++) {
+//				if(nameArr[j].compareTo(nameArr[j + 1]) > 0) {
+//					String tmp = nameArr[j];
+//					nameArr[j] = nameArr[j + 1];
+//					nameArr[j + 1] = tmp;
+//				}
+//			}
+//		}
+//		System.out.print("[");
+//		for (String starr : nameArr) {
+//			System.out.print(starr);
+//			System.out.print(",");
+//		}
+//		System.out.print("]");
+//	}
+	
 	}
-	
-	
 }

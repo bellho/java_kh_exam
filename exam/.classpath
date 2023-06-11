@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="07_OOP/src"/>
+	<classpathentry kind="src" path="09_Polymorphism/src"/>
+	<classpathentry kind="src" path="14_List_Library/src"/>
+	<classpathentry kind="src" path="14_List_Music/src"/>
+	<classpathentry kind="src" path="kh_practice/src"/>
+	<classpathentry kind="output" path="07_OOP/bin"/>
+</classpath>
